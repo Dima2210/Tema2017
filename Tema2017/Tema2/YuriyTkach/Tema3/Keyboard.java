@@ -12,7 +12,11 @@ import java.util.Scanner;
  * Created by User on 01.02.2017.
  */
 public class Keyboard {
-
+    /**
+     * Для получения String информации c клавиатуры
+     * @param message
+     * @return
+     */
     public static String keyboardString (String message){
         System.out.print(message);
         Scanner scanner = new Scanner(System.in);
@@ -21,6 +25,11 @@ public class Keyboard {
         return rez;
     }
 
+    /**
+     * Для получения int информации c клавиатуры
+     * @param message
+     * @return
+     */
     public static int keyboardInt (String message) {
         System.out.print(message);
         Scanner scanner = new Scanner(System.in);
@@ -29,12 +38,30 @@ public class Keyboard {
         return rez;
     }
 
+    /**
+     * Для получения long информации c клавиатуры
+     * @param message
+     * @return
+     */
     public static long keyboardLong (String message){
         System.out.print(message);
         Scanner scanner = new Scanner(System.in);
         long rez = scanner.nextLong();
         //scanner.close();
         return rez;
+     }
+
+    /**
+     * Для получения String[] информации c клавиатуры
+     * @param message
+     * @return
+     */
+    public static String[] keyboardStringArray (String message){
+        String[] ars = new String[keyboardInt(message)];
+        for (int index = 0; index < ars.length; index ++){
+            ars[index] = keyboardString("Введите название дополнительного поля; ");
+        }
+        return ars;
     }
 
 
