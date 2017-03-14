@@ -1,5 +1,8 @@
 package MyRepository.Tema2017.Tema2.YuriyTkach.Tema3;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * Задача в классе Main
  * Класс Партнер (Участник сделки)
@@ -8,8 +11,11 @@ package MyRepository.Tema2017.Tema2.YuriyTkach.Tema3;
 public class Party {
     private String name;
     private String address;
-    private String[] keys;
-    private String[] values;
+    // к задаче 4
+    //private String[] keys;
+    //private String[] values;
+    // к задаче 5
+    private final Map <String, String> properties = new HashMap<String, String>();
 
     public void setName(String name) {
         this.name = name;
@@ -24,7 +30,8 @@ public class Party {
     public String getAddress() {
         return address;
     }
-
+    // к задаче 4
+    /*
     public void setKeys(String[] keys) {
         this.keys = keys;
     }
@@ -32,10 +39,16 @@ public class Party {
         return keys;
     }
 
-    public void setValues(String[] values) {
+    public void setVal1ues(String[] values) {
         this.values = values;
     }
     public String[] getValues() {
         return values;
+    }
+    */
+
+   // К задаче 5
+    public Map<String, String> getProperties() {
+        return properties;
     }
 }

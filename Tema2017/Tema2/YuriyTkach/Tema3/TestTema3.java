@@ -92,7 +92,8 @@ public class TestTema3 {
         }
         // Задача 3
         product.setTitle(title[random()]);
-        product.setQuntiti(quntiti[random()]);
+        // до 5 задания
+        //product.setQuntiti(quntiti[random()]);
         product.setPrice(price[random()]);
         System.out.println(" ======== inputTestProduct()====== Пройден =======");
         return product;
@@ -121,9 +122,11 @@ public class TestTema3 {
 
         //Задача 3
         System.out.println(" Выводим product.getTitle() наименование " + product.getTitle());
-        System.out.println(" Выводим product.getQuntiti() кол-во " + product.getQuntiti());
+        // до 5 задачи
+        // System.out.println(" Выводим product.getQuntiti() кол-во " + product.getQuntiti());
         System.out.println(" Выводим product.getPrice() ценна за ед. " + product.getPrice());
-        System.out.println(" Выводим product.getCost() сумма " + product.getCost());
+        // до 5 задачи
+        //System.out.println(" Выводим product.getCost() сумма " + product.getCost());
         System.out.println("==========outputTestProduct()========= Пройден ===");
     }
 
@@ -142,8 +145,10 @@ public class TestTema3 {
             keys[index] = color[random()];
             values[index] = name[random()];
         }
+        /* до 5 задачи
         party.setKeys(keys);
         party.setValues(values);
+        */
         System.out.println("======== inputTestParti()=====Пройден========");
         return party;
     }
@@ -191,8 +196,10 @@ public class TestTema3 {
          */
         //Задача 4 заполнение доп полей
        Party seller = inputTestParti();
-
-        Deal deal = new Deal(buyer,seller,products);
+        // до 5 задачи
+        //Deal deal = new Deal(buyer,seller,products);
+        // 5 задача
+        Deal deal = new Deal(buyer,seller);
         System.out.println("========= inputTestDeal()========Пройден====");
         return deal;
     }
@@ -222,10 +229,12 @@ public class TestTema3 {
         System.out.println("Дата сделки" + deal.getDateDeal());
         outputTestParti(deal.getBuyer());
         outputTestParti(deal.getSeller());
-
+        /*до 5 задачи
         for (int index = 0; index < deal.getProduct().length; index++){
             outputTestProduct(deal.getProduct()[index]);
         }
+        */
+
         System.out.println("========outputTestDeal (Deal deal)============ Пройден=======");
     }
 }
